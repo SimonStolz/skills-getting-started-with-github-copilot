@@ -22,6 +22,7 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -63,11 +64,23 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.activity-card h4:hover {
+  color: #004999;
 }
 
 .activity-card p {
@@ -79,6 +92,7 @@ section h3 {
   padding-left: 20px;
   list-style-type: disc;
   color: #555;
+  font-size: 14px;
 }
 
 .activity-card ul li {
@@ -113,11 +127,12 @@ button {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 button:hover {
   background-color: #3949ab;
+  transform: scale(1.05);
 }
 
 .message {
@@ -153,4 +168,6 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
 }
